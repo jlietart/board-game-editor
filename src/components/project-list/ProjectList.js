@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectListItemPropTypes from '../../prop-types/ProjectListItem';
 
+import ProjectListItem from './ProjectListItem';
+
 import './ProjectList.css';
 
 const ProjectList = ({ items }) =>
   <ul className={'ProjectList'}>
-    {items.map(({ title, description }) =>
-      <li>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </li>
+    {items.map((item, key) =>
+      <ProjectListItem key={key} {...item} />
     )}
   </ul>;
 

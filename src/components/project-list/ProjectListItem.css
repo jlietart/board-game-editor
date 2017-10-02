@@ -1,0 +1,6 @@
+.ProjectListItem > .description {
+  display: none;
+}
+.ProjectListItem > .description.visible {
+  display: block;
+}
