@@ -1,4 +1,4 @@
-import { CREATE_PROJECT } from '../actions/projects';
+import { CREATE_PROJECT_SUCCESS } from '../actions/projects';
 
 const initialState = {
   isFetching: false,
@@ -16,7 +16,7 @@ const initialState = {
 
 export default function projects(state = initialState, action) {
   switch (action.type) {
-    case CREATE_PROJECT:
+    case CREATE_PROJECT_SUCCESS:
       return {
         ...state,
         items: [
