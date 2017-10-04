@@ -1,12 +1,10 @@
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
 import reducers from './reducers';
 
-const store = createStore(reducers);
-
-//console.log(store.getState());
-
-//store.dispatch({ type: '@@project/CREATE', title: 'title', description: 'description' });
-
-//console.log(store.getState());
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  reducers,
+  composeEnhancers()
+);
 
 export default store;
