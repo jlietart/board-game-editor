@@ -2,7 +2,16 @@ import { CREATE_PROJECT } from '../actions/projects';
 
 const initialState = {
   isFetching: false,
-  items: []
+  items: [{
+    title: 'Mysterium',
+    description: 'Devinez qui a tué le fantôme'
+  }, {
+    title: 'Zombicide',
+    description: 'Accomplissez les objectifs en tuant un max de zombies !'
+  }, {
+    title: 'Dice Forge',
+    description: 'Forgez vos dés pour devenir un demi-dieu'
+  }]
 };
 
 export default function projects(state = initialState, action) {
